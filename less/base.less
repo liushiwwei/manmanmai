@@ -1,0 +1,43 @@
+//头部公共样式
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 50px 0;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    background: #ff4e49;
+    border-bottom: 1px solid #e6e6e6;
+    z-index: 999;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    .left{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        color: #fff;
+        top:50%;
+        transform: translateY(-30%);
+    }
+    .right {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 0;
+        a{
+            display: block;
+            img{
+                width: 50%;
+            }
+        }
+    }
+}

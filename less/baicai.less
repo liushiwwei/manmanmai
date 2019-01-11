@@ -1,0 +1,333 @@
+// @import 'base.less';
+/* mmb主题颜色 */
+
+@main-color: #E4393C;
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    font-size: 0.16rem;
+    overflow-x: hidden;
+}
+
+img {
+    vertical-align: middle;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #E4393C;
+}
+
+a:active {
+    color: #E4393C;
+}
+
+body {
+    max-width: 750px;
+    margin: 0px auto; // 把mui 默认字体17变成14
+    font-size: .14rem;
+    line-height: .14rem;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: .2rem;
+    color: #fff;
+    line-height: .2rem;
+    padding: .08rem 0.7rem;
+}
+
+body {
+    padding: .45rem 0;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    overflow-x: hidden;
+}
+
+/* 头部区域的样式 */
+
+#header {
+    display: flex;
+    text-align: center;
+    background-color: @main-color;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    width: 100%;
+    .left {
+        width: .45rem;
+        height: .45rem;
+        line-height: .45rem;
+        color: #fff;
+    }
+    .center {
+        flex: 1;
+        margin: 0;
+        line-height: .25rem;
+        color: #fff;
+        font-weight: normal;
+        padding: .1rem 0;
+    }
+    .right {
+        width: .4rem;
+        height: .4rem;
+        line-height: .4rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: .05rem;
+        i {
+            font-size: .3rem;
+        }
+        span {
+            font-size: .08rem;
+            line-height: .08rem;
+            width: .5rem;
+        }
+    }
+}
+
+/* 导航区域 */
+
+#nav {
+    overflow: hidden;
+    width: 100%;
+    height: .38rem;
+    #category-head {
+        background-color: #fff;
+        width: 101%;
+        display: inline;
+        white-space: nowrap;
+        overflow-x: scroll;
+        float: left;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width: 4px;
+            /*高宽分别对应横竖滚动条的尺寸*/
+            height: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.2);
+        }
+        li {
+            display: inline-block;
+            text-align: center;
+            width: 0.8rem;
+            height: 0.37rem;
+            padding: 0.1rem;
+            margin-bottom: .04rem;
+            font-size: .14rem;
+            line-height: .16rem;
+            &.active {
+                border-bottom: 3px solid #E4393C
+            }
+        }
+    }
+}
+
+/* 把mui的默认样式改掉 */
+
+.mui-table-view {
+    .mui-media-object {
+        line-height: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+#main {
+    background-color: #666;
+    margin-top: .05rem;
+    margin-bottom:1.4rem;
+    .mui-table-view {
+        margin: .1rem 0;
+        >li {
+            display: flex;
+            padding: .02rem;
+            height: 1.3rem;
+            .imag {
+                width: 35%;
+                height: 100%;
+                border: .01rem solid #ccc;
+                text-align: center;
+                margin: .001rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .mui-media-body {
+                position: relative;
+                width: 65%;
+                padding: .03rem .1rem;
+                >span {
+                    line-height: .25rem;
+                }
+                >p {
+                    padding: .1rem;
+                    position: absolute;
+                    bottom: 36%;
+                    left: 0%;
+                    color: #E4393C;
+                    font-size: .18rem;
+                    >i {
+                        font-size: .14rem;
+                        color: #E4393C;
+                        font-family: SimHei;
+                        font-style: normal;
+                    }
+                    >del {
+                        font-size: .14rem;
+                        color: #666;
+                    }
+                    >em {
+                        font-size: .14rem;
+                        font-style: normal;
+                    }
+                }
+                .box {
+                    position: absolute;
+                    width: .84rem;
+                    padding: .01rem;
+                    height: .14rem;
+                    background-color: rgb(255, 183, 183);
+                    border-radius: .06rem;
+                    border: .01rem solid @main-color; // margin: .04rem 0.02rem;
+                    color: #fff;
+                    text-align: center;
+                    line-height: .12rem;
+                    bottom: 30%;
+                    >span {
+                        position: absolute;
+                        left: 46%;
+                    }
+                    .bar {
+                        min-width: .12rem;
+                        float: left;
+                        width: 1%;
+                        height: .12rem;
+                        border-radius: .06rem;
+                        background-color: @main-color;
+                        position: absolute;
+                        top: 0%;
+                        left: 0%;
+                        transition: .35s;
+                        overflow: hidden;
+                    }
+                }
+                >strong {
+                    position: absolute;
+                    top: 48%;
+                    left: 66%;
+                    color: @main-color;
+                }
+                .sala {
+                    width: 1.1rem;
+                    height: .26rem;
+                    line-height: .25rem;
+                    text-align: center;
+                    position: absolute;
+                    top: 75%;
+                    left: 5%;
+                    border: .01rem dashed @main-color;
+                    >a {
+                        font-size: .12rem;
+                    }
+                }
+            }
+            .nav-a-btn {
+                background-color: rgb(255, 94, 93);
+                color: #fff;
+                width: .6rem;
+                height: .3rem;
+                font-size: .12rem;
+                line-height: .12rem;
+                text-align: center;
+                padding-top: .09rem;
+                position: absolute;
+                border-radius: .04rem;
+                bottom: 5%;
+                right: 8%;
+            }
+        }
+    }
+    .fixede {
+        position: absolute;
+        right: 20%;
+        bottom: 20%;
+        z-index: 998;
+        position: fixed;
+        width: .53rem;
+        height: .53rem;
+        background-color: #666;
+        opacity: .3;
+        border-radius: .265rem;
+        text-align: center;
+        display:none;
+        .fa-long-arrow-up {
+            font-size: .5rem;
+            color: aliceblue;
+           
+        }
+    }
+}
+
+
+#footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(247, 247, 247);
+    .foot_top {
+        border-top: 0.01rem solid #727272;
+        border-bottom: 0.01rem solid #727272;
+        height: 0.32rem;
+        line-height: 0.3rem;
+        margin-top: 0.05rem;
+        clear: both;
+        text-align: center;
+        a {
+            box-sizing: border-box;
+            float: left;
+            font-size: 0.14rem;
+            border-right: 0.01rem solid #727272;
+            text-align: center;
+            width: 30%;
+            color: #666;
+            display: inline-block;
+        }
+        i{
+            padding-right: 0.05rem;
+        }
+    }
+    .footer-proud {
+        font-size: 0.12rem;
+        padding: 0.15rem 0;
+        color: #666;
+        text-align: center;
+        margin: 0.1rem;
+     
+    }
+}

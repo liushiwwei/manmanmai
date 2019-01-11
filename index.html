@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="images/m.ico">
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet/less" href="less/baicai.less">
+    <!-- 引入变异less的js -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem的js -->
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back(-1)" class="left fa fa-arrow-left"></a>
+        <h4 class="center">白菜价-淘宝内部券</h4>
+        <a href="http://lanyue.tanwan.com/" class="right"><i class="mui-icon mui-icon-download"></i><span>APP下载</span></a>
+    </header>
+    <!-- 导航区域 -->
+    <nav id="nav">
+        <section class="nav-btn-scroll">
+            <ul class="flex-layoutcategory-head nav-btn" id="category-head">
+                <li class="flex" id="brand_cat" searchtype="brand">品牌团</li>
+            </ul>
+        </section>
+    </nav>
+
+    <!-- 主体内容区域 -->
+    <main id="main">
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;" class="imag">
+                    <img class="mui-media-object mui-pull-left" src="./images/akesu.jpg">
+                </a>
+                <div class="mui-media-body">
+                    [包邮]双十一红包 今日开启
+                    <p class='mui-ellipsis'>¥0.0 <del>¥0.0</del> </p>
+                    <div class="box">
+                        <span>1%</span>
+                        <div class="bar" id="bar"></div>
+                    </div>
+                    <strong>已领82张</strong>
+                </div>
+                <div class="sala">
+                    <a href="javascript:;">
+                        点此领15元优惠券
+                    </a>
+                </div>
+                <a href="https://search.jd.com/Search?keyword=%E6%B8%B8%E6%88%8F%E6%9C%AC&enc=utf-8&wq=%E6%B8%B8%E6%88%8F%E6%9C%AC&pvid=f2dee3f02bdc42768daa417129787ce2"
+                    class="nav-a-btn">下单链接</a>
+            </li>
+
+        </ul>
+
+        <div class="fixede">
+                <i class="fa fa-long-arrow-up" aria-hidden="true"></i> 
+        </div>
+    </main>
+    <!-- 底部区域 -->
+
+
+    <footer id="footer">
+            <div class="foot_top">
+                <a href="login.html">登录</a> 
+                <a href="register.html">注册</a> 
+                <a href="##" style="width: 40%; border: 0;"id="rtt">
+                <i class="fa fa-arrow-up "></i>返回顶部</a>
+            </div>
+            <div class="footer-proud">
+                <p><a href="##" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                        -- 掌上比价平台</a></p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+
+
+
+    <!-- 头部列表的模板 -->
+    <script id="navlistTpl" type="text/html">
+        {{each result value index}}
+            <li class="{{index == 0 ? 'active' : ''}}" data-id="{{value.titleId}}" searchtype="brand"> {{value.title}} </li>
+        {{ /each }}
+    </script>
+
+    <script id="navcommTpl" type="text/html">
+
+        {{ each result value }}
+        <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;" class="imag">
+                        {{@value.productImg}}
+                </a>
+                <div class="mui-media-body">
+                    {{@value.productName}}
+                    <p class='mui-ellipsis'> {{@value.productPrice}} </p>
+                    <div class="box">
+                            <span>1%</span>
+                        <div class="bar" id="bar"></div>
+                    </div>
+                    <strong>已领82张</strong>
+                    <div class="sala">
+                            <a href="javascript:;">
+                                点此领15元优惠券
+                            </a>
+                        </div>
+                        <a href="https://search.jd.com/Search?keyword=%E6%B8%B8%E6%88%8F%E6%9C%AC&enc=utf-8&wq=%E6%B8%B8%E6%88%8F%E6%9C%AC&pvid=f2dee3f02bdc42768daa417129787ce2" class="nav-a-btn">下单链接</a>
+                </div>
+                
+            </li>
+        {{ /each }}
+        
+    </script>
+
+
+    <script>
+        var oBar = document.getElementById('bar');
+        oBar.style.width = oBar.offsetWidth + 10 + 'px';
+    </script>
+
+    <!-- 引入jQuery -->
+    <script src="lib/jquery/jquery-2.2.4.min.js"></script>
+    <!-- 引入bootstrap -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入zepto  获取元素 发送ajax请求 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板tempate -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的样式js -->
+    <script src="js/baicai.js"></script>
+
+
+</body>
+
+</html>
